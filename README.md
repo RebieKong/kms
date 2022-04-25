@@ -8,6 +8,7 @@ KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 
 ### 可用服务
 - `kms.cangshui.net`
+- `kms.03k.org`
 - `skms.netnr.eu.org` 维护 **CNAME** 指向有效的服务
 + `telnet skms.netnr.eu.org 1688` 测试服务是否可用
 
@@ -33,7 +34,7 @@ netstat -nxtlp | grep 1688 # 查看端口
 ### 密钥 
 <https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys>
 
-[markdown](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/get-started/kms-client-activation-keys.md)
+[kms-client-activation-keys.md](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/get-started/kms-client-activation-keys.md)
 
 ### Windows Server（LTSC 版本）
 
@@ -211,15 +212,15 @@ Windows 7 企业版 E | C29WB-22CC8-VJ326-GHFJW-H9DH4
 
 ----------
 ### Office（VOL 版本）激活步骤（管理员命令执行）
-1. 进入安装目录 `cd"C:\Program Files (x86)\Microsoft Office\Office16"`
+1. 进入安装目录 `cd "C:\Program Files (x86)\Microsoft Office\Office16"`
     - 32 位默认一般为 `C:\Program Files (x86)\Microsoft Office\Office16`
     - 64 位默认一般为 `C:\Program Files\Microsoft Office\Office16`
     - **Office16** 是 **Office 2016**
     - **Office15** 是 **Office 2013**
     - **Office14** 是 **Office 2010**
     - 打开以上所说的目录，应该有个 `OSPP.VBS` 文件
-2. 注册 KMS 服务 `cscript ospp.vbs/sethst:skms.netnr.eu.org`
-3. 激活 Office `cscript ospp.vbs/act`
+2. 注册 KMS 服务 `cscript ospp.vbs /sethst:skms.netnr.eu.org`
+3. 激活 Office `cscript ospp.vbs /act`
 
 ### Office 密钥列表
 - <https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks>
